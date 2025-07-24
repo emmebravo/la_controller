@@ -55,7 +55,7 @@ export default function CityRevenue(props: any) {
   const rev1 = useRef<any>();
 
   useEffect(() => {
-    // Emme's updates: I would change the color from being green as that's one of the highest color people tend to be colorblind to. As an added precaution, I would add a pattern for colorblind users:
+    // Emme's updates: I would change the color from being green to something like blue. Red/green is the most common color combo users with colorblindness have a hard time distingushing between. As an added precaution, I would add a pattern for colorblind users:
 
     // const defs = d3.select(rev2.current).append('svg:defs');
 
@@ -198,12 +198,12 @@ export default function CityRevenue(props: any) {
           // 	.attr("class", "sr-only");
 
           // Emme's updates: this is added to the svg interactivity so screen readers know what the chart is role is and is able to navigate with keyboard
-          // d3.select(rev2.current)
+          // d3.select(rev2.current), this would be added to all charts
           //   .select('svg')
           //   .attr('role', 'img')
           //   .attr(
           //     'aria-label',
-          //     'Bar chart showing City revenue by activity type (2010-2022)'
+          //     'Bar chart showing City revenue by activity type (2016-2022)'
           //   )
           //   .attr('tabindex', '0');
 
