@@ -197,42 +197,65 @@ export default function CityRevenue(props: any) {
           // 	.attr("aria-live", "polite")
           // 	.attr("class", "sr-only");
 
+          // Emme's update: I would also need to add a legend as the chart doesn't current have one. This would need refinement as well.
+          /*
+              const legend = d3.select(rev2.current)
+                               .append("div")
+                               .style("display", "flex")
+                               .style("gap", "1rem")
+                               .style("margin-top", "1rem");
+
+              ["Activity1", "Activity2"].forEach((label, i) => { // Replace with activity names
+                legend.append("div")
+                      .style("display", "flex")
+                       .style("align-items", "center")
+                       .style("gap", "0.5rem")
+                       .html(`
+                          <svg width="16" height="16">
+                            <rect width="16" height="16" fill="url(#${i === 0 ? "lines" : "dots"})"/>
+                          </svg>
+                        ${label}
+                `);
+              });
+          */
+
           // Emme's updates: this is added to the svg interactivity so screen readers know what the chart is role is and is able to navigate with keyboard
-          // d3.select(rev2.current), this would be added to all charts
-          //   .select('svg')
-          //   .attr('role', 'img')
-          //   .attr(
-          //     'aria-label',
-          //     'Bar chart showing City revenue by activity type (2016-2022)'
-          //   )
-          //   .attr('tabindex', '0');
+          /* d3.select(rev2.current), this would be added to all charts
+               .select('svg')
+               .attr('role', 'img')
+               .attr(
+                'aria-label',
+                'Bar chart showing City revenue by activity type (2016-2022)'
+               )
+              .attr('tabindex', '0');
+          */
 
           // Emme's update: I had never done accessibility on a d3 chart, so reading through a tutorial this hidden table is a recommendation when a chart has several data points. It definitely needs refinement, but I wanted to include it as an example.
-          // // Add hidden data table
-          // d3.select(rev2.current).append('table').attr('class', 'sr-only')
-          //   .html(`
-          // 		<caption>Revenue by Activity Type</caption>
-          // 		<thead>
-          // 			<tr>
-          // 				<th scope="col">Year</th>
-          //				<th scope="col">Activity</th>
-          //				<th scope="col">Revenue</th>
-          // 			</tr>
-          // 		</thead>
-          // 		<tbody>
-          // 			${asdf
-          //         .map(
-          //           (d) => `
-          // 				<tr>
-          //   				<td>${d.Year}</td>
-          //   				<td>${d.Activity}</td>
-          //   				<td>$${d3.format(',')(d.Revenue)}</td>
-          // 				</tr>
-          // 			`
-          //         )
-          //         .join('')}
-          // 		</tbody>
-          // 	`);
+          /* d3.select(rev2.current).append('table').attr('class', 'sr-only')
+               .html(`
+             		<caption>Revenue by Activity Type</caption>
+             		<thead>
+            			<tr>
+            				<th scope="col">Year</th>
+            				<th scope="col">Activity</th>
+            				<th scope="col">Revenue</th>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			${asdf
+                    .map(
+                       (d) => `
+            				<tr>
+              				<td>${d.Year}</td>
+              				<td>${d.Activity}</td>
+              				<td>$${d3.format(',')(d.Revenue)}</td>
+            				</tr>
+            			`
+                    )
+                     .join('')}
+            		</tbody>
+            	`);
+          */ 
         }
       }
     );
